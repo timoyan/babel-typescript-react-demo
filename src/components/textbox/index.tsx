@@ -31,7 +31,7 @@ const Input = styled('input')({
 
 export interface ITextBoxProps {}
 
-export const TextBox = React.memo<ITextBoxProps>(({}) => {
+export const TextBox = React.memo<ITextBoxProps>(() => {
     return (
         <Wrapper>
             <InputWrapper>
