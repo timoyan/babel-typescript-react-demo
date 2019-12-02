@@ -15,7 +15,19 @@
         "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
         "bundle": "webpack",
         "storybook": "start-storybook",
-        "lint": "eslint ./src --ext .ts,.tsx"
+        "eslint": "eslint --ext .tsx,.ts --fix ./src"
+    },
+    "husky": {
+        "hooks": {
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{ts,tsx}": [
+          "yarn eslint",
+          "prettier .prettierrc.js --write",
+          "git add"
+        ]
     },
     "devDependencies": {
         "@babel/cli": "^7.7.4",
@@ -33,11 +45,13 @@
         "@storybook/react": "^5.2.8",
         "@typescript-eslint/eslint-plugin": "^2.9.0",
         "@typescript-eslint/parser": "^2.9.0",
+        "babel-eslint": "^10.0.3",
         "babel-loader": "^8.0.6",
         "babel-plugin-emotion": "^10.0.23",
         "babel-preset-react-app": "^9.0.2",
         "eslint": "^6.7.2",
         "eslint-config-prettier": "^6.7.0",
+        "eslint-plugin-jsx-control-statements": "^2.2.1",
         "eslint-plugin-prettier": "^3.1.1",
         "eslint-plugin-react": "^7.17.0",
         "husky": "^3.1.0",
