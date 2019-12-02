@@ -33,12 +33,14 @@ export interface ITextBoxProps {
     name: string;
 }
 
-export const TextBox = React.memo<ITextBoxProps>(() => (
-    <Wrapper>
-        <InputWrapper>
-            <Input type="input" />
-        </InputWrapper>
-    </Wrapper>
-));
+export const TextBox = React.memo<ITextBoxProps>(() => {
+    return (
+        <Wrapper>
+            <InputWrapper>
+                <Input type="input" />
+            </InputWrapper>
+        </Wrapper>
+    );
+});
 
 TextBox.displayName = 'TextBox';
