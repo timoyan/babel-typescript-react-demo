@@ -29,7 +29,9 @@ const Input = styled('input')({
     outline: 'none',
 });
 
-export interface ITextBoxProps {}
+export interface ITextBoxProps {
+    name: string;
+}
 
 export const TextBox = React.memo<ITextBoxProps>(() => (
     <Wrapper>
