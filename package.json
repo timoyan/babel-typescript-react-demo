@@ -14,7 +14,8 @@
         "build:types": "tsc --emitDeclarationOnly",
         "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
         "bundle": "webpack",
-        "storybook": "start-storybook"
+        "storybook": "start-storybook",
+        "lint": "eslint ./src --ext .ts,.tsx"
     },
     "devDependencies": {
         "@babel/cli": "^7.7.4",
@@ -36,7 +37,11 @@
         "babel-plugin-emotion": "^10.0.23",
         "babel-preset-react-app": "^9.0.2",
         "eslint": "^6.7.2",
+        "eslint-config-prettier": "^6.7.0",
+        "eslint-plugin-prettier": "^3.1.1",
         "eslint-plugin-react": "^7.17.0",
+        "husky": "^3.1.0",
+        "lint-staged": "^9.5.0",
         "prettier": "1.19.1",
         "typescript": "^3.7.2",
         "webpack": "^4.41.2",
