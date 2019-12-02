@@ -1,3 +1,17 @@
 {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.tslint": true,
+        "source.organizeImports": true
+    },
+    "tslint.jsEnable": false,
+    "eslint.enable": true,
+    "eslint.validate": [
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "eslint.autoFixOnSave": true,
+    "eslint.alwaysShowStatus": true,
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
