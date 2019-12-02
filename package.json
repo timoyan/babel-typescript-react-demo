@@ -2,7 +2,7 @@
     "name": "react-hook-component",
     "version": "0.1.0",
     "description": "Functional component with hook",
-    "main": "index.js",
+    "main": "./lib/index.js",
     "repository": "https://github.com/timoyan/react-hook-component.git",
     "author": "Timo Yan",
     "license": "MIT",
