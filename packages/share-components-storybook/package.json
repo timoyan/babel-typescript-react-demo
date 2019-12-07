@@ -1,0 +1,38 @@
+{
+    "name": "@demo/share-components-storybook",
+    "version": "0.1.0",
+    "description": "> TODO: description",
+    "author": "Timo Yan <tomyan13@gmail.com>",
+    "homepage": "https://github.com/timoyan/react-hook-component#readme",
+    "license": "MIT",
+    "main": "./stories/index.stories.tsx",
+    "directories": {
+        "stories": "stories",
+        "test": "__tests__"
+    },
+    "files": [
+        "stories"
+    ],
+    "publishConfig": {
+        "registry": "https://registry.npm.taobao.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/timoyan/react-hook-component.git"
+    },
+    "scripts": {
+        "test": "echo \"Error: run tests from root\" && exit 1",
+        "storybook": "npx start-storybook",
+        "build": "npx build-storybook -c .storybook -o dist"
+    },
+    "bugs": {
+        "url": "https://github.com/timoyan/react-hook-component/issues"
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^5.2.8",
+        "@storybook/addon-knobs": "^5.2.8",
+        "@storybook/addon-notes": "^5.2.8",
+        "@storybook/addons": "^5.2.8",
+        "@storybook/react": "^5.2.8"
+    }
+}

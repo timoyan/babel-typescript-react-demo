@@ -1,4 +1,4 @@
-import { configure, addParameters } from '@storybook/react';
+import { addParameters, configure } from '@storybook/react';
 
 addParameters({
     options: {
@@ -9,6 +9,4 @@ addParameters({
     },
 });
 
-configure(require.context('../stories', true, /\.stories\.tsx$/), module);
-
-
+configure(require.context('../stories', true, /\.stories\.tsx$/, 'sync'), module);

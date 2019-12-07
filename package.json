@@ -1,68 +1,67 @@
 {
-    "name": "react-hook-component",
+    "name": "@demo/root",
     "version": "0.1.0",
     "description": "Functional component with hook",
-    "main": "./lib/index.js",
+    "private": true,
     "repository": "https://github.com/timoyan/react-hook-component.git",
     "author": "Timo Yan",
     "license": "MIT",
+    "workspaces": [
+        "packages/*"
+    ],
     "scripts": {
         "preinstall": "rm -rf node_modules",
-        "type-check": "tsc --noEmit",
-        "type-check:watch": "npm run type-check -- --watch",
-        "build": "npm run build:types && npm run build:js",
-        "build:types": "tsc --emitDeclarationOnly",
-        "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
-        "bundle": "webpack",
-        "storybook": "start-storybook",
-        "eslint": "eslint --ext .tsx,.ts --fix ./src"
+        "install": "npx lerna link",
+        "type-check": "npx tsc --noEmit",
+        "type-check:watch": "yarn type-check -- --watch",
+        "build:component": "cd packages/share-components && yarn build",
+        "build:storybook": "cd packages/share-components-storybook && yarn build",
+        "bundle": "npx webpack",
+        "storybook": "cd packages/share-components-storybook && yarn start-storybook",
+        "eslint": "npx eslint --ext .tsx,.ts --fix ./packages"
     },
     "husky": {
         "hooks": {
-          "pre-commit": "lint-staged"
+            "pre-commit": "npx lint-staged"
         }
-      },
-      "lint-staged": {
+    },
+    "lint-staged": {
         "*.{ts,tsx}": [
-          "yarn eslint",
-          "prettier .prettierrc.js --write",
-          "git add"
+            "yarn eslint",
+            "npx prettier .prettierrc.js --write",
+            "git add"
         ]
     },
     "devDependencies": {
-        "@babel/cli": "^7.7.4",
-        "@babel/core": "^7.7.4",
+        "@babel/cli": "^7.7.5",
+        "@babel/core": "^7.7.5",
         "@babel/plugin-proposal-class-properties": "^7.7.4",
         "@babel/plugin-proposal-numeric-separator": "^7.7.4",
         "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
-        "@babel/preset-env": "^7.7.4",
+        "@babel/preset-env": "^7.7.5",
         "@babel/preset-react": "^7.7.4",
         "@babel/preset-typescript": "^7.7.4",
-        "@storybook/addon-actions": "^5.2.8",
-        "@storybook/addon-knobs": "^5.2.8",
-        "@storybook/addon-notes": "^5.2.8",
-        "@storybook/addons": "^5.2.8",
-        "@storybook/react": "^5.2.8",
-        "@typescript-eslint/eslint-plugin": "^2.9.0",
-        "@typescript-eslint/parser": "^2.9.0",
+        "@typescript-eslint/eslint-plugin": "^2.10.0",
+        "@typescript-eslint/parser": "^2.10.0",
         "babel-eslint": "^10.0.3",
         "babel-loader": "^8.0.6",
         "babel-plugin-emotion": "^10.0.23",
-        "babel-preset-react-app": "^9.0.2",
+        "babel-preset-react-app": "^9.1.0",
         "eslint": "^6.7.2",
         "eslint-config-prettier": "^6.7.0",
         "eslint-plugin-jsx-control-statements": "^2.2.1",
         "eslint-plugin-prettier": "^3.1.1",
         "eslint-plugin-react": "^7.17.0",
         "husky": "^3.1.0",
+        "lerna": "^3.19.0",
         "lint-staged": "^9.5.0",
         "prettier": "1.19.1",
-        "typescript": "^3.6.2",
+        "typescript": "3.7.3",
         "webpack": "^4.41.2",
         "webpack-cli": "^3.3.10"
     },
     "dependencies": {
-        "@types/react": "^16.9.13",
+        "@types/react": "^16.9.15",
         "@types/react-dom": "^16.9.4",
         "emotion": "^9.2.12",
         "react": "^16.12.0",
