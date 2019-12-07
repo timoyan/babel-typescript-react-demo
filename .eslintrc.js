@@ -31,7 +31,7 @@ module.exports = {
     },
     plugins: ['@typescript-eslint', 'react', 'jsx-control-statements', 'prettier'],
     rules: {
-        'prettier/prettier': 1,
+        'prettier/prettier': 'error',
         'no-console': ['warn', { allow: ['warn', 'error'] }],
         eqeqeq: ['warn', 'always'],
         'prefer-const': ['error', { destructuring: 'all', ignoreReadBeforeAssign: true }],

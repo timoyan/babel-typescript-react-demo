@@ -7,5 +7,4 @@ module.exports = {
     bracketSpacing: true,
     jsxBracketSameLine: true,
     arrowParens: 'always',
-    parser: 'typescript',
 };

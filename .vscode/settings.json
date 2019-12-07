@@ -6,12 +6,12 @@
     },
     "tslint.jsEnable": false,
     "eslint.enable": true,
-    "eslint.validate": [
-        "javascriptreact",
-        "typescript",
-        "typescriptreact"
-    ],
+    "eslint.validate": ["javascriptreact", "typescript", "typescriptreact"],
     "eslint.autoFixOnSave": true,
     "eslint.alwaysShowStatus": true,
-    "typescript.tsdk": "node_modules/typescript/lib"
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
