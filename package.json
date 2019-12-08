@@ -16,6 +16,7 @@
         "bundle:component": "cd packages/share-components && yarn bundle",
         "build:storybook": "cd packages/share-components-storybook && yarn build",
         "build:management": "cd packages/group-management && yarn build",
+        "start:management": "cd packages/group-management && yarn start",
         "storybook": "cd packages/share-components-storybook && yarn start-storybook",
         "type-check": "npx tsc --noEmit",
         "type-check:watch": "yarn type-check -- --watch",
