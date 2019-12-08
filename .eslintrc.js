@@ -54,4 +54,12 @@ module.exports = {
         },
     },
     ignorePatterns: ['node_modules/', 'dist/', 'lib/'],
+    overrides: [
+        {
+            files: ['**/*.tsx'],
+            rules: {
+                'react/prop-types': 'off',
+            },
+        },
+    ],
 };

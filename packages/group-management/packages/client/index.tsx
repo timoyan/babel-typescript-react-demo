@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { App } from './App';
 
 const root = document.getElementById('root');
 
-class App extends React.PureComponent {
-    render(): JSX.Element {
-        return (
-            <div>
-                <h1>Hello World!</h1>
-            </div>
-        );
-    }
-}
+ReactDOM.render(<App />, root);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+if (module.hot) {
+    module.hot.accept('./App', () => {
+        const NextApp = require('./App').App;
+        ReactDOM.render(<NextApp />, root);
+    });
+}
