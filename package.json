@@ -12,12 +12,13 @@
     "scripts": {
         "preinstall": "rm -rf node_modules",
         "install": "npx lerna link",
-        "type-check": "npx tsc --noEmit",
-        "type-check:watch": "yarn type-check -- --watch",
         "build:component": "cd packages/share-components && yarn build",
         "bundle:component": "cd packages/share-components && yarn bundle",
         "build:storybook": "cd packages/share-components-storybook && yarn build",
+        "build:management": "cd packages/group-management && yarn build",
         "storybook": "cd packages/share-components-storybook && yarn start-storybook",
+        "type-check": "npx tsc --noEmit",
+        "type-check:watch": "yarn type-check -- --watch",
         "eslint": "npx eslint --ext .tsx,.ts --fix ./packages"
     },
     "husky": {

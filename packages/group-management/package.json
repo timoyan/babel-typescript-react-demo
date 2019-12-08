@@ -5,7 +5,7 @@
     "author": "Timo Yan <tomyan13@gmail.com>",
     "homepage": "https://github.com/timoyan/react-hook-component#readme",
     "license": "MIT",
-    "main": "lib/group-management.js",
+    "main": "./lib/packages/client/index.js",
     "directories": {
         "lib": "lib",
         "test": "__tests__"
@@ -21,7 +21,10 @@
         "url": "git+https://github.com/timoyan/react-hook-component.git"
     },
     "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1"
+        "test": "echo \"Error: run tests from root\" && exit 1",
+        "build": "rm -rf lib && yarn build:js && yarn build:types",
+        "build:types": "npx tsc --emitDeclarationOnly",
+        "build:js": "npx babel . --out-dir ./lib --extensions \".ts,.tsx\" --source-maps inline"
     },
     "bugs": {
         "url": "https://github.com/timoyan/react-hook-component/issues"
