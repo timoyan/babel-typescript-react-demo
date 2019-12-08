@@ -33,6 +33,10 @@
             "yarn eslint",
             "npx prettier .prettierrc.js --write",
             "git add"
+        ],
+        "*.{json}": [
+            "npx prettier .prettierrc.js --write",
+            "git add"
         ]
     },
     "devDependencies": {
