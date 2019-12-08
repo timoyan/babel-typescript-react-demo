@@ -1,7 +1,7 @@
 {
     "name": "@demo/share-components-storybook",
     "version": "0.1.0",
-    "description": "> TODO: description",
+    "description": "It's demo share components storybook.",
     "author": "Timo Yan <tomyan13@gmail.com>",
     "homepage": "https://github.com/timoyan/react-hook-component#readme",
     "license": "MIT",

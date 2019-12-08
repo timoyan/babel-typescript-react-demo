@@ -1,1 +1,1 @@
-export { ITextBoxProps, TextBox } from './textbox';
+export * from './textbox';
