@@ -22,9 +22,10 @@
     },
     "scripts": {
         "test": "echo \"Error: run tests from root\" && exit 1",
-        "build": "yarn build:types && yarn build:js",
-        "build:types": "npx tsc --baseUrl packages/share-components --emitDeclarationOnly",
-        "build:js": "npx babel ./ --out-dir ./lib --extensions \".ts,.tsx\" --source-maps inline"
+        "build": "rm -rf lib && yarn build:js && yarn build:types",
+        "build:types": "npx tsc --emitDeclarationOnly",
+        "build:js": "npx babel . --out-dir ./lib --extensions \".ts,.tsx\" --source-maps inline",
+        "bundle": "npx webpack"
     },
     "bugs": {
         "url": "https://github.com/timoyan/react-hook-component/issues"

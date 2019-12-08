@@ -22,7 +22,7 @@ const InputWrapper = styled('div')({
 });
 
 const Input = styled('input')({
-    border: 'none',
+    border: '1px solid black',
     width: '100%',
     height: '100%',
     fontSize: '14px',
