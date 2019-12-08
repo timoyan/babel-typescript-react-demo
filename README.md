@@ -1,3 +1,4 @@
-# react-hook-component
+# babel-typescript-react-demo
 
-React function component with hook
+## Purpose
+Learning how to orgainze different type projects within monorepo.
